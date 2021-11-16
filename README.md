@@ -2,4 +2,4 @@
 
 Тестовый проект
 
-![playstore](https://user-images.githubusercontent.com/56388642/141825855-d922df41-a2c0-44fc-a2a6-326e4b05068b.png)
+<img width="552" alt="TestApp" src="https://user-images.githubusercontent.com/56388642/141978256-05d49555-3eca-41fc-afeb-dfa04c87c203.png">
