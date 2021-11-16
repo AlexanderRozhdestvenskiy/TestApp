@@ -57,3 +57,8 @@ TestApp - тестовое приложение, созданное для де�
 <img width="508" alt="Снимок экрана 2021-11-16 в 16 10 58" src="https://user-images.githubusercontent.com/56388642/141994904-86194f6a-3b0d-47e3-8754-2593edc352a4.png">
 
 <img width="523" alt="Снимок экрана 2021-11-16 в 16 12 57" src="https://user-images.githubusercontent.com/56388642/141994925-e62b3b27-41e6-4eb5-888e-43db54ab4baf.png">
+
+# Обзор
+
+![Screen](https://user-images.githubusercontent.com/56388642/142067055-d4731953-b4de-44ee-9a27-204627fef6cb.png)
+
