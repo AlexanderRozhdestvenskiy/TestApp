@@ -28,8 +28,13 @@ struct DetailNewsView: View {
                 }
                 .aspectRatio(contentMode: .fit)
                 
+                Text(news.headline)
+                    .font(.title2)
+                
+                Spacer()
+                
                 Text(news.summary)
-                    .font(.callout)
+                    .font(.title3)
                 
                 Spacer()
             }

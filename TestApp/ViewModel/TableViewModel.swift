@@ -11,13 +11,12 @@ import SwiftUI
 
 final class TableViewModel: ObservableObject {
     
-    let columns: [GridItem] = [GridItem(.flexible(maximum: 160)),
-                               GridItem(.flexible(maximum: 160))]
-    
     @Published var table: [TableModel] = load("Data.json")
+    
+    let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 3)
 }
 
-private func load<T: Decodable>(_ filename: String) -> T {
+fileprivate func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {

@@ -14,7 +14,7 @@ struct TableSubView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(.pink)
+                .foregroundColor(.gray)
             RoundedRectangle(cornerRadius: 8)
                 .stroke(lineWidth: 4)
                 .foregroundColor(.white)
@@ -22,6 +22,7 @@ struct TableSubView: View {
                 Spacer()
                 Image(systemName: table.systemName)
                     .resizable()
+                    .foregroundColor(.black)
                     .aspectRatio(contentMode: .fit)
                     .padding()
                 Spacer()
@@ -30,12 +31,11 @@ struct TableSubView: View {
                     Spacer()
                     Text("\(table.id)")
                 }
+                .foregroundColor(.black)
                 .frame(alignment: .center)
                 .padding()
             }
-            .foregroundColor(.primary)
         }
-        .padding(10)
     }
 }
 

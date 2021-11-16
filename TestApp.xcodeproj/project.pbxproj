@@ -23,7 +23,8 @@
 		8908F12A27428E6900CADB29 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908F12927428E6900CADB29 /* TableViewModel.swift */; };
 		8908F12C27428F1B00CADB29 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908F12B27428F1B00CADB29 /* TableView.swift */; };
 		8908F12E27428F3E00CADB29 /* TableSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8908F12D27428F3E00CADB29 /* TableSubView.swift */; };
-		893DD2512742A60100136E99 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893DD2502742A60100136E99 /* AccountView.swift */; };
+		8929E7B12743B52F003AD490 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8929E7B02743B52F003AD490 /* CardView.swift */; };
+		893DD2512742A60100136E99 /* MonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893DD2502742A60100136E99 /* MonitorView.swift */; };
 		893DD2532742A95100136E99 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893DD2522742A95100136E99 /* NetworkMonitor.swift */; };
 		8942384B2742C7F5001D3517 /* ExampleTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942384A2742C7F5001D3517 /* ExampleTableModel.swift */; };
 		8942384D2742C846001D3517 /* ExampleNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942384C2742C846001D3517 /* ExampleNewsModel.swift */; };
@@ -51,7 +52,8 @@
 		8908F12927428E6900CADB29 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		8908F12B27428F1B00CADB29 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		8908F12D27428F3E00CADB29 /* TableSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSubView.swift; sourceTree = "<group>"; };
-		893DD2502742A60100136E99 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		8929E7B02743B52F003AD490 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		893DD2502742A60100136E99 /* MonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorView.swift; sourceTree = "<group>"; };
 		893DD2522742A95100136E99 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		8942384A2742C7F5001D3517 /* ExampleTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableModel.swift; sourceTree = "<group>"; };
 		8942384C2742C846001D3517 /* ExampleNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNewsModel.swift; sourceTree = "<group>"; };
@@ -103,8 +105,9 @@
 				8908F122274288EA00CADB29 /* URLView.swift */,
 				8908F11C2742807C00CADB29 /* DetailNewsView.swift */,
 				8908F11827427F2000CADB29 /* NewsView.swift */,
+				8929E7B02743B52F003AD490 /* CardView.swift */,
 				8908F112274276A900CADB29 /* StockView.swift */,
-				893DD2502742A60100136E99 /* AccountView.swift */,
+				893DD2502742A60100136E99 /* MonitorView.swift */,
 				894238472742C694001D3517 /* SubView */,
 			);
 			path = View;
@@ -158,11 +161,11 @@
 			children = (
 				8947BE03274262C700AD5169 /* TestAppApp.swift */,
 				8947BE05274262C700AD5169 /* ContentView.swift */,
-				894238492742C79C001D3517 /* Extension */,
-				894238482742C6F9001D3517 /* Resources */,
 				894238462742C684001D3517 /* View */,
 				894238452742C672001D3517 /* ViewModel */,
 				894238442742C650001D3517 /* Model */,
+				894238492742C79C001D3517 /* Extension */,
+				894238482742C6F9001D3517 /* Resources */,
 				8908F12427428CC700CADB29 /* Info.plist */,
 				8947BE09274262C800AD5169 /* Preview Content */,
 			);
@@ -257,7 +260,7 @@
 				8908F11F274281DD00CADB29 /* OriginTabView.swift in Sources */,
 				8908F123274288EA00CADB29 /* URLView.swift in Sources */,
 				8908F11D2742807C00CADB29 /* DetailNewsView.swift in Sources */,
-				893DD2512742A60100136E99 /* AccountView.swift in Sources */,
+				893DD2512742A60100136E99 /* MonitorView.swift in Sources */,
 				8908F12A27428E6900CADB29 /* TableViewModel.swift in Sources */,
 				8908F12827428DE900CADB29 /* TableModel.swift in Sources */,
 				8947BE06274262C700AD5169 /* ContentView.swift in Sources */,
@@ -269,6 +272,7 @@
 				8908F12C27428F1B00CADB29 /* TableView.swift in Sources */,
 				893DD2532742A95100136E99 /* NetworkMonitor.swift in Sources */,
 				8908F10F2742741300CADB29 /* StockModel.swift in Sources */,
+				8929E7B12743B52F003AD490 /* CardView.swift in Sources */,
 				8908F111274275E200CADB29 /* StockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,6 +444,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -39,9 +39,9 @@ struct OriginTabView: View {
                 }
                 .tag(Tab.json)
             
-            AccountView()
+            MonitorView()
                 .tabItem {
-                    Label("Account", systemImage: "person.circle")
+                    Label("Monitor", systemImage: "wifi.square")
                 }
                 .tag(Tab.account)
 

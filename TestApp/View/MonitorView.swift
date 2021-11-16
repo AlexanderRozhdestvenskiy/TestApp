@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AccountView: View {
+struct MonitorView: View {
     
     @ObservedObject var monitor = NetworkMonitor()
     
@@ -28,6 +28,6 @@ struct AccountView: View {
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView()
+        MonitorView()
     }
 }

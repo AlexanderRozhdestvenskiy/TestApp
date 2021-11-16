@@ -12,13 +12,16 @@ struct NewsSubView: View {
     var news: News
     
     var body: some View {
-        HStack {
-            Text("\(news.id)")
-            Spacer()
-            VStack(alignment: .leading) {
-                Text(news.category)
-                Text(news.related)
-            }
+        VStack {
+            Text("\(news.source)")
+                .font(.title2)
+                .bold()
+            
+            Divider()
+            
+            Text(news.headline)
+                .multilineTextAlignment(.leading)
+                .foregroundColor(.black)
         }
     }
 }

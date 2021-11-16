@@ -23,7 +23,6 @@ struct NewsView: View {
                                 NewsSubView(news: news)
                             }
                         }
-                        .frame(maxWidth: 1000, alignment: .leading)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(8)

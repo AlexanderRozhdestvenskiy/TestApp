@@ -15,21 +15,21 @@ struct TableView: View {
         NavigationView {
             ZStack {
                 Color("AppColor")
-                
                 GeometryReader { geometry in
                     ScrollView {
-                    LazyVGrid(columns: viewModel.columns, spacing: 0) {
+                        LazyVGrid(columns: viewModel.columns, spacing: 16) {
                             ForEach(viewModel.table) { i in
-                                TableSubView(table: i)
-                                    .frame(width: geometry.size.width / 2.3, height: geometry.size.width / 2.3)
-                                   
+                                NavigationLink(destination: CardView(card: i)) {
+                                    TableSubView(table: i)
+                                        .aspectRatio(3/4, contentMode: .fit)
+                                }
                             }
-                           
                         }
+                        .padding()
                     }
+                    .navigationTitle("Table")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
-                .navigationTitle("Table")
-                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
@@ -39,10 +39,11 @@ struct TableView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             TableView()
-                
+            
             TableView()
-                .previewDevice("iPhone SE (1st generation)")
                 .preferredColorScheme(.dark)
+                .previewDevice("iPhone SE (1st generation)")
+                
         }
     }
 }
