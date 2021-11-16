@@ -13,7 +13,7 @@ final class TableViewModel: ObservableObject {
     
     @Published var table: [TableModel] = load("Data.json")
     
-    let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 3)
+    let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 2)
 }
 
 fileprivate func load<T: Decodable>(_ filename: String) -> T {

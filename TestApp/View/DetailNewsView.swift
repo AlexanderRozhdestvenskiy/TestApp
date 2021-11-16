@@ -16,30 +16,33 @@ struct DetailNewsView: View {
             
             Color("AppColor")
             
-            VStack {
-                Text("\(news.source)")
-                    .font(.largeTitle)
-                    .bold()
-                
-                AsyncImage(url: URL(string: news.image)) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
+            ScrollView {
+                VStack {
+                    Text("\(news.source)")
+                        .font(.largeTitle)
+                        .bold()
+                    
+                    AsyncImage(url: URL(string: news.image)) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .aspectRatio(contentMode: .fit)
+                    
+                    Text(news.headline)
+                        .font(.title)
+                    
+                    Spacer(minLength: 24)
+                    
+                    Text(news.summary)
+                        .padding()
+                        .font(.callout)
+                        .background(Color.white)
+                        .cornerRadius(4)
                 }
-                .aspectRatio(contentMode: .fit)
-                
-                Text(news.headline)
-                    .font(.title2)
-                
-                Spacer()
-                
-                Text(news.summary)
-                    .font(.title3)
-                
-                Spacer()
-            }
-            .navigationBarTitle("Detail")
+                .navigationBarTitle("Detail")
             .padding()
+            }
         }
         .navigationBarTitleDisplayMode(.inline)
     }
