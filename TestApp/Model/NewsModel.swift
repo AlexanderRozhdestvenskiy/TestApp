@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct News: Identifiable, Decodable {
+struct NewsModel: Identifiable, Decodable {
     var category: String
     var datetime: Int
     var headline: String

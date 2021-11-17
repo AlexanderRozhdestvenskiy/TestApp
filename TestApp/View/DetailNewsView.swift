@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DetailNewsView: View {
     
-    var news: News
+    var news: NewsModel?
+    var fetchedData: News?
     
     var body: some View {
         ZStack {
@@ -18,30 +19,28 @@ struct DetailNewsView: View {
             
             ScrollView {
                 VStack {
-                    Text("\(news.source)")
+                    Text(news == nil ? fetchedData!.source! : news!.source)
                         .font(.largeTitle)
                         .bold()
                     
-                    AsyncImage(url: URL(string: news.image)) { image in
+                    AsyncImage(url: URL(string: news == nil ? fetchedData!.image! : news!.image)) { image in
                         image.resizable()
                     } placeholder: {
                         ProgressView()
                     }
                     .aspectRatio(contentMode: .fit)
                     
-                    Text(news.headline)
-                        .font(.title)
-                    
-                    Spacer(minLength: 24)
-                    
-                    Text(news.summary)
-                        .padding()
-                        .font(.callout)
-                        .background(Color.white)
-                        .cornerRadius(4)
+                    VStack {
+                        Text(news == nil ? fetchedData!.headline! : news!.headline)
+                            .bold()
+                        
+                        Divider()
+                        
+                        Text(news == nil ? fetchedData!.summary! : news!.summary)
+                    }
                 }
                 .navigationBarTitle("Detail")
-            .padding()
+                .padding()
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -50,6 +49,6 @@ struct DetailNewsView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailNewsView(news: News.example)
+        DetailNewsView(news: NewsModel.example)
     }
 }

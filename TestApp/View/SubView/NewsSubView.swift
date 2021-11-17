@@ -9,17 +9,18 @@ import SwiftUI
 
 struct NewsSubView: View {
     
-    var news: News
+    var news: NewsModel?
+    var fetchedData: News?
     
     var body: some View {
         VStack {
-            Text("\(news.source)")
+            Text(news == nil ? fetchedData!.source! : news!.source)
                 .font(.title2)
                 .bold()
             
             Divider()
             
-            Text(news.headline)
+            Text(news == nil ? fetchedData!.headline! : news!.headline)
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.black)
         }
@@ -28,6 +29,6 @@ struct NewsSubView: View {
 
 struct NewsSubView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsSubView(news: News.example)
+        NewsSubView(news: NewsModel.example)
     }
 }

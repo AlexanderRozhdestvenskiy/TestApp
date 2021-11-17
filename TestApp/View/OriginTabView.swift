@@ -19,6 +19,7 @@ struct OriginTabView: View {
     }
     
     var body: some View {
+        
         TabView(selection: $selection) {
             
             NewsView(viewmodel: NewsViewModel())

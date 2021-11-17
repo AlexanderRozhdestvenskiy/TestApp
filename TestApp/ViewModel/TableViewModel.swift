@@ -5,8 +5,6 @@
 //  Created by Alexander Rozhdestvenskiy on 15.11.2021.
 //
 
-import Foundation
-import Combine
 import SwiftUI
 
 final class TableViewModel: ObservableObject {

@@ -15,6 +15,7 @@ struct TableView: View {
         NavigationView {
             ZStack {
                 Color("AppColor")
+                
                 GeometryReader { geometry in
                     ScrollView {
                         LazyVGrid(columns: viewModel.columns, spacing: 16) {

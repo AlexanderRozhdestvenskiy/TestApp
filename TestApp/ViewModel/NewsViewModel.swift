@@ -6,13 +6,36 @@
 //
 
 import SwiftUI
-import Combine
+import CoreData
 
 final class NewsViewModel: ObservableObject {
     
-    @Published var news: [News] = []
+    @Published var news: [NewsModel] = []
     
-    func getNews() {
+    func saveData(context: NSManagedObjectContext) {
+        news.forEach { (data) in
+            let entity = News(context: context)
+            
+            entity.datetime = Int64(data.datetime)
+            entity.headline = data.headline
+            entity.summary = data.summary
+            entity.id = Int64(data.id)
+            entity.category = data.category
+            entity.url = data.url
+            entity.source = data.source
+            entity.image = data.image
+            entity.ralated = data.related
+        }
+        
+        do {
+            try context.save()
+            print("Success")
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func getNews(context: NSManagedObjectContext) {
         
         let token = "c6617h2ad3id7qljgfq0"
 
@@ -34,8 +57,9 @@ final class NewsViewModel: ObservableObject {
                 guard let data = data else { return }
                 DispatchQueue.main.async {
                     do {
-                        let decodeNews = try JSONDecoder().decode([News].self, from: data)
+                        let decodeNews = try JSONDecoder().decode([NewsModel].self, from: data)
                         self.news = decodeNews
+                        self.saveData(context: context)
                     } catch let error {
                         print("Error Decoding", error)
                     }
