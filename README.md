@@ -53,5 +53,6 @@ TestApp - тестовое приложение, созданное для де�
 
 # Обзор
 
-![Screen](https://user-images.githubusercontent.com/56388642/142067055-d4731953-b4de-44ee-9a27-204627fef6cb.png)
+![Ligth](https://user-images.githubusercontent.com/56388642/142211941-a04706c4-6fc8-4fc8-bc51-f442ec0b3a9d.png)
 
+![Dark](https://user-images.githubusercontent.com/56388642/142211963-b0455d69-ce5a-4017-aa04-7c97ec7ff5ce.png)
